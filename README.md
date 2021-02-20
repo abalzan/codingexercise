@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/abalzan/codingexercise.svg?style=svg)](https://circleci.com/gh/abalzan/codingexercise)
 
 # code exercise accela Mid-level Java developer
 
