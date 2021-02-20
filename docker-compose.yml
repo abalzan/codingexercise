@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  codingexercise:
+    build: .
+    container_name: codingexercise
+    ports:
+      - "8080:8080"

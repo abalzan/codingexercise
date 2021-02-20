@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "4bde9744-cbf2-4cc7-a457-9b1b28d9ba4d",
+		"name": "coding-Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get All persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get person by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/ce63d043-815c-4041-bae9-0c60e2d15c13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"ce63d043-815c-4041-bae9-0c60e2d15c13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add person with Addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"second\",\n    \"lastName\": \"last\",\n    \"addresses\": [\n        {\n            \"street\": \"Blahh\",\n            \"city\": \"Cork\",\n            \"state\": \"Co Cork\",\n            \"postal\": \"T23 Y599\"\n        },\n        {\n            \"street\": \"Aasd\",\n            \"city\": \"Dublin 2\",\n            \"state\": \"Co Dublin\",\n            \"postal\": \"D02 DH60\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update person",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Andrei CHanging\",\n    \"lastName\": \"Changing last name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/3bdcc9fa-ccb8-4d65-bcfc-f3ff329944f6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"3bdcc9fa-ccb8-4d65-bcfc-f3ff329944f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update person with Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Andrei CHanging with address\",\n    \"lastName\": \"Changing last name\",\n    \"addresses\": [\n        {\n            \"street\": \"Test\",\n            \"city\": \"Cork\",\n            \"state\": \"Co Cork\",\n            \"postal\": \"T23 Y599\"\n        },\n        {\n            \"street\": \"Beaux Lane House, Mercer Street Lower\",\n            \"city\": \"Dublin 2\",\n            \"state\": \"Co Dublin\",\n            \"postal\": \"D02 DH60\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/3bdcc9fa-ccb8-4d65-bcfc-f3ff329944f6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"3bdcc9fa-ccb8-4d65-bcfc-f3ff329944f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/f9abb68f-b666-4588-97cc-a6e393b85d00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"f9abb68f-b666-4588-97cc-a6e393b85d00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save new address for person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"street\": \"Adding new address\",\n        \"city\": \"New City\",\n        \"state\": \"Co Dublin\",\n        \"postal\": \"F01 0101\"\n\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/ce63d043-815c-4041-bae9-0c60e2d15c13/addresses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"ce63d043-815c-4041-bae9-0c60e2d15c13",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"street\": \"updating address\",\n            \"city\": \"update City\",\n            \"state\": \"Co Dublin\",\n            \"postal\": \"F01 0101\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/addresses/1c88d78d-6343-49f5-abc7-c82e9aab028f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addresses",
+						"1c88d78d-6343-49f5-abc7-c82e9aab028f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all addresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/addresses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete person address",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/persons/ce63d043-815c-4041-bae9-0c60e2d15c13/addresses/1c88d78d-6343-49f5-abc7-c82e9aab028f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"ce63d043-815c-4041-bae9-0c60e2d15c13",
+						"addresses",
+						"1c88d78d-6343-49f5-abc7-c82e9aab028f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

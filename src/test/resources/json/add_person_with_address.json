@@ -1,0 +1,12 @@
+{
+  "firstName": "Fake Name",
+  "lastName": "Fake Last",
+  "addresses": [
+    {
+      "street": "Fake Street",
+      "city": "Fake City",
+      "state": "Fake state",
+      "postal": "ITF FAKE"
+    }
+  ]
+}
